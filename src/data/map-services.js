@@ -1,4 +1,4 @@
-const accessToken = process.env.MAP_BOX_KEY;
+
 
 export const mapServices = [
   {
