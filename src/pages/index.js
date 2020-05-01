@@ -46,7 +46,10 @@ const IndexPage = () => {
   async function mapEffect({ leafletElement: map } = {}) {
     if ( !map || !hasCountries ) return;
 
-    
+    clearMapLayers({
+      map,
+      excludeByName: [ 'OpenStreetMap' ]
+    })
 
     const locationsGeoJson = trackerLocationsToGeoJson(countries);
 
